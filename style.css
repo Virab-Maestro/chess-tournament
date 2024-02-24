@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    min-height: 100%;
+    overflow-y: hidden;
+}
+body{
+    font-family: "Golos Text";
+    font-weight: 400;
+    font-size: 20px;
+}
+ol, ul{
+    list-style-type: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1252px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
