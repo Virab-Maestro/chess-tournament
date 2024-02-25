@@ -53,7 +53,6 @@ a{
       transform: translateX(-100%);
     }
 }
-  
 .marquee {
     --gap: 30px;
     position: relative;
@@ -99,7 +98,6 @@ a{
       transform: translateX(calc(-100% - var(--gap)));
     }
 }
-
 .marquee-2{
     margin-top: 140px;
 }
@@ -114,12 +112,14 @@ td:nth-child(even){
     font-weight: bold;
 }
 
-
+/* slider */
 .swiper {
     width: 100%;
     overflow: unset!important;
     overflow-x: clip !important;
-    /* height: auto; */
+}
+.swiper-slide{
+    text-align: center;
 }
 .swiper-slide img{
     margin-bottom: 28px;
@@ -127,13 +127,12 @@ td:nth-child(even){
 .swiper-slide img.animation-hide{
     transform: scale(0.5);
 }
-.swiper__btns{
+.swiper__interface{
     position: absolute;
     top: -115px;
     right: 0;
-
 }
-.swiper__btns_inner{
+.swiper__interface_inner{
     position: relative;
     display: flex;
     align-items: center;
@@ -148,8 +147,21 @@ td:nth-child(even){
     padding: 13px 22px;
     cursor: pointer;
     transition: all .3s;
-    /* position: relative !important; */
 }
+/* hover effect */
+.players-button-prev:hover{
+    background-color: #FBCE51;
+}
+.players-button-next:hover{
+    background-color: #FBCE51;
+}
+.swiper-button-disabled {
+    background-color: #D6D6D6;
+}
+.swiper-button-disabled.players-button-next:hover, .swiper-button-disabled.players-button-prev:hover{
+    background-color: #D6D6D6;
+}
+/* arrows */
 .players-button-prev::before, .players-button-next::before{
     content: "";
     background-repeat: no-repeat;
@@ -168,26 +180,9 @@ td:nth-child(even){
     background-image: url("../img/arrow-right.svg");
     left: 61%;
 }
-/* hover effect */
-.players-button-prev:hover{
-    background-color: #FBCE51;
-}
-.players-button-next:hover{
-    background-color: #FBCE51;
-}
 .swiper-pagination{
     position: static !important;
     width: 52px !important;
-}
-.swiper-slide{
-    text-align: center;
-}
-
-.swiper-button-disabled {
-    background-color: #D6D6D6;
-}
-.swiper-button-disabled.players-button-next:hover, .swiper-button-disabled.players-button-prev:hover{
-    background-color: #D6D6D6;
 }
 
 /* Animations */
@@ -201,11 +196,8 @@ td:nth-child(even){
 .animation-to-right{transform: translateX(-35%);}
 .animation-to-bottom{transform: translateY(35%);}
 .animation-to-bottom{transform: translateY(-35%);}
-
 .animation-show{
     opacity: 1;
     filter: blur(0px);
     transform: translate(0, 0) rotate(0) scale(1) !important;
-    /* transform: translate(0, 0);
-    transform: scale(1); */
 }
