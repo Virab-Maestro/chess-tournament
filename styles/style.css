@@ -27,7 +27,7 @@
     background-image: url("../img/home-1.png");
     background-color: rgba(233, 222, 212, 1);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: center;
 }
 .home__bg{
@@ -42,6 +42,26 @@
     position: relative;
     z-index: 5;
     padding: 62px 0 120px;
+}
+/* Chess pieces */
+.home__inner::before, .home__inner::after{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.home__inner::before{
+    background-image: url("../img/piece-2.png");
+    width: 192px;
+    height: 220px;
+    bottom: -2px;
+    right: 291px;
+}
+.home__inner::after{
+    background-image: url("../img/piece-1.png");
+    width: 90px;
+    height: 125px;
+    bottom: 25px;
+    right: 25px;
 }
 .home__title{
     font-family: "Merriweather";
@@ -89,7 +109,7 @@
     transition: all .3s;
 }
 .home__link_light{
-    background: #fff;
+    background: transparent;
     color: #1F1F1F;
     border: 2px solid #1F1F1F;
     transition: all .3s;
