@@ -82,11 +82,14 @@
     text-align: center;
     max-width: 542px;
     margin-bottom: 40px;
+
+    transition-delay: 100ms;
 }
 .home__footer{
     display: flex;
     align-items: center;
     gap: 16px;
+    transition-delay: 200ms;
 }
 .home__link{
     display: flex;
@@ -125,7 +128,7 @@
 
 /* support section */
 .support{
-    padding-top: 106px;
+    margin-top: 106px;
 }
 /* support lecture */
 .support__lecture{
@@ -169,7 +172,7 @@
 
 /* steps section */
 .steps{
-    padding-top: 200px;
+    margin-top: 200px;
 }
 .steps__title{
     max-width: 800px;

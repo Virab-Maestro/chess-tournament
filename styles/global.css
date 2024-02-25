@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 html,body{
     min-height: 100%;
     overflow-x: hidden;
@@ -118,6 +121,12 @@ td:nth-child(even){
     overflow-x: clip !important;
     /* height: auto; */
 }
+.swiper-slide img{
+    margin-bottom: 28px;
+}
+.swiper-slide img.animation-hide{
+    transform: scale(0.5);
+}
 .swiper__btns{
     position: absolute;
     top: -115px;
@@ -173,9 +182,30 @@ td:nth-child(even){
 .swiper-slide{
     text-align: center;
 }
+
 .swiper-button-disabled {
     background-color: #D6D6D6;
 }
 .swiper-button-disabled.players-button-next:hover, .swiper-button-disabled.players-button-prev:hover{
     background-color: #D6D6D6;
+}
+
+/* Animations */
+.animation-hide, .animation-to-left, .animation-to-right, .animation-to-bottom, .animation-to-top{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all .5s;
+    transition-delay: 300ms;
+}
+.animation-to-left{transform: translateX(35%);}
+.animation-to-right{transform: translateX(-35%);}
+.animation-to-bottom{transform: translateY(35%);}
+.animation-to-bottom{transform: translateY(-35%);}
+
+.animation-show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0, 0) rotate(0) scale(1) !important;
+    /* transform: translate(0, 0);
+    transform: scale(1); */
 }
