@@ -108,8 +108,7 @@ th, td{
 td:nth-child(even){
     font-weight: bold;
 }
-
-/* slider */
+/* slider players */
 .swiper {
     width: 100%;
     overflow: unset!important;
