@@ -217,3 +217,13 @@
     top: -85px;
     right: -75px;
 }
+
+/* players */
+
+/* footer section */
+.footer{
+    padding: 40px 0 72px;
+}
+.footer__text{
+    font-size: 16px;
+}
