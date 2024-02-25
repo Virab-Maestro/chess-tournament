@@ -68,6 +68,7 @@ a{
     line-height: 110%;
     text-transform: uppercase;
     color: #fff;
+    z-index: 5;
   }
 .marquee__content {
     flex-shrink: 0;

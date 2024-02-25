@@ -1,5 +1,6 @@
 @import url("./global.css");
 
+
 /* header */
 .header{
     padding: 28.3px 0;
@@ -48,7 +49,7 @@
     content: "";
     position: absolute;
     background-repeat: no-repeat;
-}
+} 
 .home__inner::before{
     background-image: url("../img/piece-2.png");
     width: 192px;
@@ -73,7 +74,9 @@
     margin-bottom: 24px;
 }
 .home__title span{
-    display: inline-block;
+    display: block;
+    max-width: 510px;
+    margin-left: auto;
     text-align: center;
 }
 .home__text{
@@ -282,3 +285,77 @@
 .footer{
     padding: 40px 0 72px;
 }
+
+
+/* Media ************************************************************************************** */
+
+@media(max-width: 1252px){
+    .home__inner::before{
+        right: 125px;
+    }
+    .home__inner::after{
+        display: none;
+    }
+}
+@media(max-width: 1024px){
+    .home{
+        background-position: 40%;
+    }
+    .home__title{
+        max-width: 500px;
+        font-size: 54px;
+    }
+    .home__inner::before{
+        right: 20px;
+    }
+}
+@media(max-width: 768px){
+    .home{
+        background-image: url("../img/home-1.png");
+        /* background-position: 26%; */
+    }
+    .home__inner::before{
+        right: -95px;
+    }
+}
+@media(max-width: 640px){
+    .home{
+        background-image: url("../img/home-1-mobile.png");
+        background-position: 75% 101%;
+        background-size: auto;
+    }
+    .home__inner {
+        padding: 40px 0 120px;
+    }
+    .home__inner::before{
+        background-image: url('../img/piece-2-mobile.png');
+        width: 98px;
+        height: 131px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+    }
+
+    .home__title{
+        max-width: 335px;
+        font-size: 36px;
+    }
+    .home__text{
+        text-align: left;
+        max-width: 421px;
+    }
+    .home__footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .home__link{
+        width: 335px;
+        height: 45px;
+        padding: 18px 43px;
+    }
+    .home__link span{
+        max-width: unset;
+        margin: 0 auto;
+    }
+}
+/* background-position: center 101%; */
