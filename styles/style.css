@@ -149,7 +149,7 @@
 
 /* steps section */
 .steps{
-    padding-top: 270px;
+    padding-top: 200px;
 }
 .steps__title{
     max-width: 800px;
@@ -168,7 +168,7 @@
 .steps__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px; 
 }
@@ -219,6 +219,12 @@
 }
 
 /* players */
+.players{
+    padding-top: 200px;
+}
+.players__title{
+    margin-bottom: 60px;
+}
 .players__name{
     max-width: 290px;
     margin: 0 auto;
@@ -243,6 +249,11 @@
     font-weight: 500;
     color: #3057A2;
     margin: 0 auto;
+    transition: all .3s;
+}
+.players__link:hover{
+    background-color: #3057A2;
+    color: #fff;
 }
 /* footer section */
 .footer{

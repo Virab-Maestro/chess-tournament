@@ -91,6 +91,7 @@ td:nth-child(even){
     border-radius: 50%;
     padding: 13px 22px;
     cursor: pointer;
+    transition: all .3s;
     /* position: relative !important; */
 }
 .players-button-prev::before, .players-button-next::before{
@@ -109,7 +110,14 @@ td:nth-child(even){
 }
 .players-button-next::before{
     background-image: url("../img/arrow-right.svg");
-    left: 57%;
+    left: 61%;
+}
+/* hover effect */
+.players-button-prev:hover{
+    background-color: #FBCE51;
+}
+.players-button-next:hover{
+    background-color: #FBCE51;
 }
 .swiper-pagination{
     position: static !important;
@@ -117,4 +125,10 @@ td:nth-child(even){
 }
 .swiper-slide{
     text-align: center;
+}
+.swiper-button-disabled {
+    background-color: #D6D6D6;
+}
+.swiper-button-disabled.players-button-next:hover, .swiper-button-disabled.players-button-prev:hover{
+    background-color: #D6D6D6;
 }
