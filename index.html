@@ -21,7 +21,10 @@
             <div class="container">
                 <header class="header">
                     <a class="header__inner" href="#">
-                        <img class="header__logo" src="./img/logo.svg" alt="logo">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="./img/logo-mobile.svg">
+                            <img class="header__logo" src="./img/logo.svg" alt="logo">
+                        </picture>
                         <div class="header__title">Клуб четырех коней</div>
                     </a>
                 </header>
@@ -35,7 +38,10 @@
                     </footer>
                 </section>
             </div>
-            <img class="home__bg" src="./img/home-2.png" alt="home-bg-1">
+            <picture>
+                <source media="(max-width: 640px)" srcset="./img/home-2-mobile.png">
+                <img class="home__bg" src="./img/home-2.png" alt="home-bg-1">
+            </picture>
         </div>
         
         <div class="marquee">

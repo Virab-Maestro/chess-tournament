@@ -357,5 +357,38 @@
         max-width: unset;
         margin: 0 auto;
     }
+    .home__link_light {
+        background: #fff;
+        border: none;
+    }
+    .marquee{
+        height: 38px;
+        font-size: 16px;
+    }
+    .home__footer{
+        gap: 14px;
+    }
+}
+@media(max-width: 480px){
+    .header__title{
+        font-size: 14px;
+        max-width: 140px;
+    }
+    .home{
+        background-position: 77% 103%;
+    }
+    .home__inner {
+        padding: 20px 0 288px;
+    }
+    .home__title{
+        margin: 0 auto 24px;
+    }
+    .home__text {
+        max-width: 325px;
+        margin: 0 auto 40px;
+    }
+    .home__footer {
+        align-items: center;
+    }
 }
 /* background-position: center 101%; */
