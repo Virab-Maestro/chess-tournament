@@ -7,11 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./styles/style.css">
     <title>Chess tournament</title>
 </head>
 <body>
-
 
     <main>
         <div class="home">
@@ -118,48 +121,61 @@
         <section class="players">
             <div class="container">
                 <section class="players__inner">
-                    <i id="left" class="fa-solid fa-angle-left"></i>
-                    <section class="players__carousel">
-                        <!-- <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" />
-                        <img src="img/player-img.png" alt="img" draggable="false" /> -->
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                        <section class="players__item">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                        </section>
-                    </section>
+                    <div class="swiper">
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper__btns">
+                            <div class="swiper__btns_inner">
+                                <div class="players-button-prev"></div>
+                                
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
 
-                    <!-- </section> -->
-                    <i id="right" class="fa-solid fa-angle-right"></i>
+                                <div class="players-button-next"></div>
+                            </div>
+                        </div>
+
+                        <!-- Additional required wrapper -->
+                        <section class="swiper-wrapper">
+                          <!-- Slides -->
+                          <section class="swiper-slide">
+                            <img src="img/player-img.png" alt="img" draggable="false" />
+                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                            <p class="players__level">Чемпион мира по шахматам</p>
+                            <a class="players__link" href="#">Подробнее</a>
+                          </section>
+                          <section class="swiper-slide">
+                            <img src="img/player-img.png" alt="img" draggable="false" />
+                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                            <p class="players__level">Чемпион мира по шахматам</p>
+                            <a class="players__link" href="#">Подробнее</a>
+                          </section>
+                          <section class="swiper-slide">
+                            <img src="img/player-img.png" alt="img" draggable="false" />
+                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                            <p class="players__level">Чемпион мира по шахматам</p>
+                            <a class="players__link" href="#">Подробнее</a>
+                          </section>
+                          <section class="swiper-slide">
+                            <img src="img/player-img.png" alt="img" draggable="false" />
+                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                            <p class="players__level">Чемпион мира по шахматам</p>
+                            <a class="players__link" href="#">Подробнее</a>
+                          </section>
+
+                          <section class="swiper-slide">
+                            <img src="img/player-img.png" alt="img" draggable="false" />
+                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                            <p class="players__level">Чемпион мира по шахматам</p>
+                            <a class="players__link" href="#">Подробнее</a>
+                          </section>
+                          <section class="swiper-slide">
+                            <img src="img/player-img.png" alt="img" draggable="false" />
+                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                            <p class="players__level">Чемпион мира по шахматам</p>
+                            <a class="players__link" href="#">Подробнее</a>
+                          </section>
+                        </section>
+                    </div>
                 </section>
             </div>
         </section>
@@ -173,6 +189,8 @@
         </div>
     </footer>
     
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>

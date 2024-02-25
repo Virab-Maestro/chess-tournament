@@ -63,3 +63,58 @@ th, td{
 td:nth-child(even){
     font-weight: bold;
 }
+
+
+.swiper {
+    width: 100%;
+    overflow: unset!important;
+    overflow-x: clip !important;
+    /* height: auto; */
+}
+.swiper__btns{
+    position: absolute;
+    top: -115px;
+    right: 0;
+
+}
+.swiper__btns_inner{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.players-button-prev, .players-button-next{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: #313131;
+    border-radius: 50%;
+    padding: 13px 22px;
+    cursor: pointer;
+    /* position: relative !important; */
+}
+.players-button-prev::before, .players-button-next::before{
+    content: "";
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 30px;
+}
+.players-button-prev::before{
+    background-image: url("../img/arrow-left.svg");
+}
+.players-button-next::before{
+    background-image: url("../img/arrow-right.svg");
+    left: 57%;
+}
+.swiper-pagination{
+    position: static !important;
+    width: 52px !important;
+}
+.swiper-slide{
+    text-align: center;
+}
