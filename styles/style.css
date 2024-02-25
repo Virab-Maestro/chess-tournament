@@ -152,9 +152,12 @@
     align-items: flex-start;
     gap: 45px;
 }
-.support__title_info{
+.support__title_playing{
     max-width: 700px;
     margin-bottom: 60px;
+}
+.support__title_mobile{
+    display: none;
 }
 .support__table{
     margin-bottom: 48px;
@@ -180,7 +183,7 @@
 .support__img_2{
     background-color: #fff;
     max-width: 100%;
-    min-width: 420px;
+    min-width: 360px;
 }
 
 /* steps section */
@@ -370,6 +373,20 @@
     }
 
     /* support playing */
+    .support__inner_playing{
+        flex-direction: column-reverse;
+    }
+    .support__title_playing{
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .support__title_desktop{
+        display: none;
+    }
+    .support__title_mobile{
+        display: block;
+    }
+    
 }
 @media(max-width: 640px){
     .home{
@@ -450,15 +467,46 @@
         align-items: center;
     }
 
-    /* support */
+    /* support lecture */
     .support {
         margin-top: 48px;
     }
     .support__lecture {
         margin-bottom: 24px;
     }
+    .support__title_lecture {
+        max-width: 325px;
+        text-align: left;
+        margin-bottom: 0;
+    }
     .support__img_1 {
         width: auto;
+    }
+
+    /* support playing */
+    .support__title_playing{
+        max-width: 325px;
+    }
+    .support__title_playing{
+        text-align: left;
+    }
+
+    /* table */
+    tr{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #D0D0D0;
+        padding-bottom: 16px;
+    }
+    tr:last-child{
+        border-bottom: none;
+    }
+    td{
+        padding-bottom: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
     }
 }
 /* background-position: center 101%; */
