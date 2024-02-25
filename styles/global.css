@@ -31,6 +31,7 @@ a{
 .title{
     font-family: "MerriWeather";
     font-size: 36px;
+    /* font-size: 28px; */
     line-height: 135%;
     text-transform: uppercase;
 }
@@ -90,14 +91,6 @@ a{
     top: 50%;
     right: -18px;
     transform: translateY(-50%);
-}
-@keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
 }
 .marquee-2{
     margin-top: 140px;
@@ -201,4 +194,12 @@ td:nth-child(even){
     opacity: 1;
     filter: blur(0px);
     transform: translate(0, 0) rotate(0) scale(1) !important;
+}
+
+
+/* Media ************************************************************************************** */
+@media(max-width: 1024px){
+    .title{
+        font-size: 28px;
+    }
 }
