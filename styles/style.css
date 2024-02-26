@@ -185,7 +185,22 @@
     max-width: 100%;
     min-width: 360px;
 }
+.discount{
+    position: relative;
+    margin-right: 12px;
+}
+.discount::before{
+    content:"";
+    position: absolute;
+    left: 50%;
+    top: 57%;
+    transform: translate(-50%, -50%);
 
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #F54932;
+}
 /* steps section */
 .steps{
     margin-top: 200px;
@@ -222,9 +237,6 @@
 
     background-blend-mode: color-burn;
     padding: 20px;
-
-    /* display: flex;
-    gap: 15px; */
 }
 .steps__list .steps__item{
     display: flex;
