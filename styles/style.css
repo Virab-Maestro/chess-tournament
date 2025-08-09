@@ -3,7 +3,7 @@
 
 /* header */
 .header{
-    padding: 28.3px 0;
+    padding: 26px 0 0 0;
 }
 .header__inner{
     position: relative;
@@ -16,6 +16,7 @@
 .header__title{
     font-weight: bold;
     font-size: 16.65px;
+    text-transform: uppercase;
     line-height: 108%;
     color: #595653;
     max-width: 147px;
@@ -161,6 +162,15 @@
 }
 .support__table{
     margin-bottom: 48px;
+}
+.support__table tr td:first-child {
+    padding-left: 0px;
+}
+.support__table tr:first-child td {
+    padding-top: 0px;
+}
+.support__table tr:last-child td {
+    padding-bottom: 0px;
 }
 .support__table_mobile{
     margin-top: 44px;
@@ -325,6 +335,7 @@
 }
 .steps__desc{
     max-width: 302px;
+    font-size: 20px;
     font-weight: 500;
 }
 .steps__item:nth-child(7) .steps__desc{
@@ -412,6 +423,7 @@
     background-color: #E9DED4;
 }
 .footer__text{
+    font-size: 16px;
     opacity: 0.6;
 }
 
@@ -452,7 +464,7 @@
     /* support playing */
     .support__inner_playing {
         align-items: center;
-        gap: 30px;
+        gap: 34px;
     }
     .support__table{
         display: none;
@@ -594,7 +606,9 @@
     .steps__title{
         margin-bottom: 148px;
     }
-    .steps__title a{}
+    .steps__title a{
+        font-size: 18px;
+    }
     .steps__img {
         right: auto;
         left: 50%;
@@ -678,21 +692,21 @@
 }
 @media(max-width: 480px){
     .header__title{
-        font-size: 14px;
+        font-size: 14.42px;
         max-width: 140px;
     }
     .home{
         background-position: 77% 103%;
     }
     .home__inner {
-        padding: 20px 0 288px;
+        padding: 40px 0 288px;
     }
     .home__title{
         margin: 0 auto 24px;
     }
     .home__text {
         max-width: 325px;
-        margin: 0 auto 40px;
+        margin: 0 auto 32px;
     }
     .home__footer {
         align-items: center;
@@ -713,6 +727,23 @@
     .support__img_1 {
         width: auto;
     }
+    .support__table_mobile tr{
+        padding: 0;
+    }
+    .support__table_mobile tr td{
+        padding: 0;
+    }
+    .support__table_mobile tr td:last-child {
+        margin: 0 0 0 0;
+    }
+    .support__table_mobile tr td:first-child {
+        margin: 0 0 12px 0;
+    }
+    .support__table_mobile tr:not(:last-child) {
+        padding: 0 0 16px 0;
+        margin: 0 0 16px 0;
+    }
+
 
     /* support playing */
     .support__title_playing{
@@ -762,4 +793,3 @@
         font-size: 16px;
     }
 }
-/* background-position: center 101%; */

@@ -246,3 +246,9 @@ td:nth-child(even){
         left: 52%;
     }
 }
+
+@media(max-width: 480px){
+    .container {
+        padding: 0 20px;
+    }
+}
