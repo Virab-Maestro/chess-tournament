@@ -121,7 +121,6 @@ td:nth-child(even){
     font-weight: bold;
 }
 
-
 /* slider players */
 .players__slider-wrapper {
     position: relative;
@@ -151,7 +150,8 @@ td:nth-child(even){
 }
 .players-pag-info {
     text-align: center;
-    width: 52px;
+    width: 35px;
+    font-size: 16px;
 }
 .slider__slash, .slider__total {
     opacity: 0.6;
@@ -224,8 +224,8 @@ players__level {
 }
 .slider-button-prev, .slider-button-next{
     position: relative;
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
     border: none;
     outline: none;
     background-color: #313131;
@@ -294,8 +294,6 @@ players__level {
     .title-large{
         font-size: 36px;
     }
-    .swiper__desktop{display: none;}
-    .swiper__laptop{display: block;}
 }
 
 @media(max-width: 768px){
@@ -321,11 +319,8 @@ players__level {
         bottom: -80px;
     }
     .players-pag-info {
-        width: 43px;
-        font-size: 16px;
+        width: 34px;
     }
-    .swiper__laptop{display: none;}
-    .swiper__mobile{display: block;}
 }
 
 @media(max-width: 480px){

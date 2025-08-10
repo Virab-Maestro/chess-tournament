@@ -67,7 +67,6 @@ function pNextSlide() {
     if(pSlides.length > pSlidesToShow) {
         pSliderInner.style.transform = `translateX(${+currentOffset - (pSlideWidth + pSlideGap)}px)`;
     }
-
 }
 //slide every 4s
 let slideInterval = setInterval(pNextSlide, 4000);
