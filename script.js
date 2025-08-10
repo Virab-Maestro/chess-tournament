@@ -1,145 +1,156 @@
-//Desktop slider steps
-const steps = new Swiper(".steps__slider", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-    //   type: 'custom',
-    },
-    navigation:{
-        nextEl: ".players-button-next",
-        prevEl: ".players-button-prev"
-    }
-});
-
-//Desktop slider players
-let players = new Swiper(".swiper__desktop", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: 'custom',
-      renderCustom: function (swiper, current, total) {
-        return 2 + current + '<span>' + '/' + (swiper.slides.length) + '</span>'; 
-      }
-    },
-    navigation:{
-        nextEl: ".players-button-next",
-        prevEl: ".players-button-prev"
-    }
-});
-//laptop slider players
-players = new Swiper(".swiper__laptop", {
-    slidesPerView: 2,
-    spaceBetween: 30,
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: 'custom',
-      renderCustom: function (swiper, current, total) {
-        return 1 + current + '<span>' + '/' + (swiper.slides.length) + '</span>'; 
-      }
-    },
-    navigation:{
-        nextEl: ".players-button-next",
-        prevEl: ".players-button-prev"
-    }
-});
-//mobile slider players
-players = new Swiper(".swiper__mobile", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: 'custom',
-      renderCustom: function (swiper, current, total) {
-          return current + '<span>' + '/' + (swiper.slides.length) + '</span>'; 
-      }
-    },
-    navigation:{
-        nextEl: ".players-button-next",
-        prevEl: ".players-button-prev"
-    }
-});
-
-
 //Players slider
-const sliderInner = document.querySelector(".players__slider-inner"),
-    slides = document.querySelectorAll(".players__slide"),
-    slidedVal = document.querySelector(".players__slider-pagination .slider__slided"),
-    totalVal = document.querySelector(".players__slider-pagination .slider__total"),
-    slidesToShow = Number(window.getComputedStyle(document.body).getPropertyValue("--slides-to-show")),
-    slideWidth = Number(window.getComputedStyle(slides[0]).width.match(/(-?\d+)px$/)[1]),
-    slideGap = Number(window.getComputedStyle(sliderInner).gap.match(/(-?\d+)px$/)[1]),
-    offsetToLastSlide = -(slides.length - slidesToShow) * (slideWidth + slideGap);
+const pSliderInner = document.querySelector(".players__slider-inner"),
+    pSlides = document.querySelectorAll(".players__slide"),
+    pSlidedVal = document.querySelector(".players__slider-pagination .slider__slided"),
+    pTotalVal = document.querySelector(".players__slider-pagination .slider__total"),
+    pSlidesToShow = Number(window.getComputedStyle(document.body).getPropertyValue("--player-slides-to-show")),
+    pSlideWidth = Number(window.getComputedStyle(pSlides[0]).width.match(/(-?\d+)px$/)[1]),
+    pSlideGap = Number(window.getComputedStyle(pSliderInner).gap.match(/(-?\d+)px$/)[1]),
+    pOffsetToLastSlide = -(pSlides.length - pSlidesToShow) * (pSlideWidth + pSlideGap);
 
 //initializing slider position(nums)
-slidedVal.textContent = slides.length > slidesToShow ? slidesToShow : slides.length;
-totalVal.textContent = slides.length;
-function setPos(direction) {//0 - prev; 1 - next
-    if(direction == 0 && slidedVal.textContent <= slidesToShow) {
-        slidedVal.textContent = totalVal.textContent;
+pSlidedVal.textContent = pSlides.length > pSlidesToShow ? pSlidesToShow : pSlides.length;
+pTotalVal.textContent = pSlides.length;
+function pSetPagination(direction) {//0 - prev; 1 - next
+    if(direction == 0 && pSlidedVal.textContent <= pSlidesToShow) {
+        pSlidedVal.textContent = pTotalVal.textContent;
         return;
-    }else if(direction == 1 && slidedVal.textContent == slides.length) {
-        slidedVal.textContent = slides.length > slidesToShow ? slidesToShow : slides.length;
+    }else if(direction == 1 && pSlidedVal.textContent == pSlides.length) {
+        pSlidedVal.textContent = pSlides.length > pSlidesToShow ? pSlidesToShow : pSlides.length;
         return;
     }
 
     if(direction == 0) {
         console.log('ch0')
-        slidedVal.textContent = +slidedVal.textContent - 1;
+        pSlidedVal.textContent = +pSlidedVal.textContent - 1;
     }else {
         console.log('ch1')
-        slidedVal.textContent = +slidedVal.textContent + 1;
+        pSlidedVal.textContent = +pSlidedVal.textContent + 1;
     }
 }
 
 //next, prev
-sliderInner.style.transform = "translateX(0px)";
-function prevSlide() {
+pSliderInner.style.transform = "translateX(0px)";
+function pPrevSlide() {
     //restart sliding interval
     clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 4000)
+    slideInterval = setInterval(pNextSlide, 4000)
 
     //update slided number preview
-    setPos(0);
+    pSetPagination(0);
 
     //slide
-    const currentOffset =  sliderInner.style.transform.match(/\w+\((-?\d+)px\)$/)[1];
-    if(currentOffset == 0 && slides.length > slidesToShow) {
-        sliderInner.style.transform = `translateX(${offsetToLastSlide}px)`;
+    const currentOffset =  pSliderInner.style.transform.match(/\w+\((-?\d+)px\)$/)[1];
+    if(currentOffset == 0 && pSlides.length > pSlidesToShow) {
+        pSliderInner.style.transform = `translateX(${pOffsetToLastSlide}px)`;
         return;
     }
-    if(slides.length > slidesToShow) {
-        sliderInner.style.transform = `translateX(${+currentOffset + (slideWidth + slideGap)}px)`;
+    if(pSlides.length > pSlidesToShow) {
+        pSliderInner.style.transform = `translateX(${+currentOffset + (pSlideWidth + pSlideGap)}px)`;
     }
 }
 
-function nextSlide() {
+function pNextSlide() {
     //restart sliding interval
     clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 4000)
+    slideInterval = setInterval(pNextSlide, 4000)
 
     //update slided number preview
-    setPos(1);
+    pSetPagination(1);
 
     //slide
-    const currentOffset =  sliderInner.style.transform.match(/\w+\((-?\d+)px\)$/)[1];
-    if(currentOffset == offsetToLastSlide) {
-        sliderInner.style.transform = `translateX(0px)`;
+    const currentOffset =  pSliderInner.style.transform.match(/\w+\((-?\d+)px\)$/)[1];
+    if(currentOffset == pOffsetToLastSlide) {
+        pSliderInner.style.transform = `translateX(0px)`;
         return;
     }
-    if(slides.length > slidesToShow) {
-        sliderInner.style.transform = `translateX(${+currentOffset - (slideWidth + slideGap)}px)`;
+    if(pSlides.length > pSlidesToShow) {
+        pSliderInner.style.transform = `translateX(${+currentOffset - (pSlideWidth + pSlideGap)}px)`;
     }
 
 }
-
 //slide every 4s
-let slideInterval = setInterval(nextSlide, 4000);
+let slideInterval = setInterval(pNextSlide, 4000);
 
+//Steps slider
+const stSliderInner = document.querySelector(".steps__slider-inner"),
+    stSlides = document.querySelectorAll(".steps__slide"),
+    stSliderPos = document.querySelector(".steps__pag-info"),
+    stSliderBtns = document.querySelectorAll(".steps__slider-btn"),
+    stSliderPrev = document.querySelector(".steps__slider-btn.slider-button-prev"),
+    stSliderNext = document.querySelector(".steps__slider-btn.slider-button-next"),
+    stSlidesToShow = Number(window.getComputedStyle(document.body).getPropertyValue("--step-slides-to-show")),
+    stSlideWidth = Number(window.getComputedStyle(stSlides[0]).width.match(/(-?\d+)px$/)[1]),
+    stSlideGap = Number(window.getComputedStyle(stSliderInner).gap.match(/(-?\d+)px$/)[1]),
+    stOffsetToLastSlide = -(stSlides.length - stSlidesToShow) * (stSlideWidth + stSlideGap);
+
+//initializing slider position(dots)
+for(let i = 0; i < stSlides.length; i++) { //insert dots to dom
+    stSliderPos.innerHTML += `<span class="slider-dot"></span>`
+}
+stSliderDots = document.querySelectorAll(".slider-dot"); //get dots from dom
+let activeSlideIdx = null; // active dot
+if(stSlides.length > stSlidesToShow) { //find active dot idx
+    activeSlideIdx = stSlidesToShow - 1;
+}else {
+    activeSlideIdx = stSlides.length - 1;
+}
+stSliderDots[activeSlideIdx].classList.add("slider-dot--active"); //color active dot
+
+function stSetPos(direction) {//0 - prev; 1 - next
+    // disable current active dot
+    for(let dot of stSliderDots) {
+        dot.classList.remove("slider-dot--active");
+    }
+    // color new active dot
+    if(direction == 0) {
+        activeSlideIdx--;
+    }else {
+        activeSlideIdx++;
+    }
+    stSliderDots[activeSlideIdx].classList.add("slider-dot--active");
+
+    //update disable button
+    for(let btn of stSliderBtns) {
+        btn.classList.remove("button-disabled");
+    }
+    if(activeSlideIdx == 0) {
+        stSliderPrev.classList.add("button-disabled");
+    }else if(activeSlideIdx == stSlides.length - 1) {
+        stSliderNext.classList.add("button-disabled");
+    }
+}
+
+//next, prev
+stSliderInner.style.transform = "translateX(0px)";
+function stPrevSlide() {
+    //slide
+    const currentOffset =  stSliderInner.style.transform.match(/\w+\((-?\d+)px\)$/)[1];
+    if(currentOffset == 0) {
+        return;
+    }
+
+    //update slided number preview
+    stSetPos(0);
+    if(stSlides.length > stSlidesToShow) {
+        stSliderInner.style.transform = `translateX(${+currentOffset + (stSlideWidth + stSlideGap)}px)`;
+    }
+}
+
+function stNextSlide() {
+    //slide
+    const currentOffset =  stSliderInner.style.transform.match(/\w+\((-?\d+)px\)$/)[1];
+    if(currentOffset == stOffsetToLastSlide) {
+        return;
+    }
+
+    //update slided number preview
+    stSetPos(1);
+    if(stSlides.length > stSlidesToShow) {
+        stSliderInner.style.transform = `translateX(${+currentOffset - (stSlideWidth + stSlideGap)}px)`;
+    }
+
+}
 
 //Animations
 const animatedElements = document.querySelectorAll('.animation-hide');

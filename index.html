@@ -172,24 +172,10 @@
                         <img class="steps__img" src="./img/steps-decore.png" alt="steps-decore-img">
                     </sections>
                 </sections>
-                
+
                 <div class="steps__slider">
-                    <!-- navigation buttons -->
-                    <div class="swiper__interface">
-                        <div class="swiper__interface_inner">
-                            <div class="players-button-prev"></div>
-                            
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
-
-                            <div class="players-button-next"></div>
-                        </div>
-                    </div>
-
-                    <!-- Additional required wrapper -->
-                    <section class="swiper-wrapper">
-                      <!-- Slides -->
-                        <sections class="swiper-slide steps__item">
+                    <div class="steps__slider-inner">
+                        <div class="steps__slide steps__item">
                             <div class="steps__item_step">
                                 <div class="steps__count">1</div>
                                 <h3 class="steps__desc steps__desc_1">Строительство железнодорожной магистрали Москва-Васюки</h3>
@@ -199,14 +185,14 @@
                                 <div class="steps__count">2</div>
                                 <h3 class="steps__desc steps__desc_2">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</h3>
                             </div>
-                        </sections>
-                        <sections class="swiper-slide steps__item">
+                        </div>
+                        <div class="steps__slide steps__item">
                             <div class="steps__item_step">
                                 <div class="steps__count">3</div>
                                 <h3 class="steps__desc steps__desc_3">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</h3>
                             </div>
-                        </sections>
-                        <sections class="swiper-slide steps__item">
+                        </div>
+                        <div class="steps__slide steps__item">
                             <div class="steps__item_step">
                                 <div class="steps__count">4</div>
                                 <h3 class="steps__desc steps__desc_4">Строительство дворца для турнира</h3>
@@ -215,22 +201,27 @@
                                 <div class="steps__count">5</div>
                                 <h3 class="steps__desc steps__desc_5">Размещение гаражей для гостевого автотранспорта</h3>
                             </div>
-                        </sections>
-                        <sections class="swiper-slide steps__item">
+                        </div>
+                        <div class="steps__slide steps__item">
                             <div class="steps__item_step">
                                 <div class="steps__count">6</div>
                                 <h3 class="steps__desc steps__desc_6">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</h3>
                             </div>
-                        </sections>
-                        <sections class="swiper-slide steps__item">
+                        </div>
+                        <div class="steps__slide steps__item">
                             <div class="steps__item_step">
                                 <div class="steps__count">7</div>
                                 <h3 class="steps__desc steps__desc_7">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</h3>
                             </div>
-                        </sections>
-                    </section>
-                </div>
+                        </div>
+                    </div>
 
+                    <div class="steps__slider-pagination">
+                        <button class="slider-button-prev steps__slider-btn button-disabled" onclick="stPrevSlide()"></button>
+                        <div class="steps__pag-info"></div>
+                        <button class="slider-button-next steps__slider-btn" onclick="stNextSlide()"></button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -289,13 +280,13 @@
                             </div>
 
                             <div class="players__slider-pagination">
-                                <button class="players-button-prev" onclick="prevSlide()"></button>
+                                <button class="slider-button-prev" onclick="pPrevSlide()"></button>
                                 <div class="players-pag-info">
                                     <span class="slider__slided"></span>
                                     <span class="slider__slash">/</span>
                                     <span class="slider__total"></span>
                                 </div>
-                                <button class="players-button-next" onclick="nextSlide()"></button>
+                                <button class="slider-button-next" onclick="pNextSlide()"></button>
                             </div>
                         </div>
                     </div>
@@ -324,8 +315,6 @@
         </div>
     </footer>
     
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
