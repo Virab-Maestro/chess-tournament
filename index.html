@@ -238,155 +238,66 @@
             <div class="container">
                 <section class="players__inner">
                     <h2 class="players__title title-large">Участники турнира</h2>
-                    <!-- desktop swiper -->
-                    <div class="swiper swiper__desktop">
-                        <!-- navigation buttons -->
-                        <div class="swiper__interface">
-                            <div class="swiper__interface_inner">
-                                <div class="players-button-prev"></div>
-                                
-                                <!-- If we need pagination -->
-                                <div class="swiper-pagination"></div>
 
-                                <div class="players-button-next"></div>
+                    <!-- players slider -->
+                    <div class="players__slider-wrapper">
+                        <div class="players__slider">
+                            <div class="players__slider-inner">
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Хозе-Рауль Капабланка</h4>
+                                    <p class="players__level">Чемпион мира по шахматам</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Эммануил Ласкер</h4>
+                                    <p class="players__level">Чемпион мира по шахматам</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Александр Алехин</h4>
+                                    <p class="players__level">Чемпион мира по шахматам</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Арон Нимцович</h4>
+                                    <p class="players__level">Чемпион мира по шахматам</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Рихард Рети</h4>
+                                    <p class="players__level">Чемпион мира по шахматам</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Остап Бендер</h4>
+                                    <p class="players__level">Гроссмейстер</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+
+                                <div class="players__slide">
+                                    <img class="" src="img/player-img.png" alt="img" draggable="false" />
+                                    <h4 class="players__name">Остап Бендер</h4>
+                                    <p class="players__level">Гроссмейстер</p>
+                                    <a class="players__link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+
+                            <div class="players__slider-pagination">
+                                <button class="players-button-prev" onclick="prevSlide()"></button>
+                                <div class="players-pag-info">
+                                    <span class="slider__slided"></span>
+                                    <span class="slider__slash">/</span>
+                                    <span class="slider__total"></span>
+                                </div>
+                                <button class="players-button-next" onclick="nextSlide()"></button>
                             </div>
                         </div>
-
-                        <!-- Additional required wrapper -->
-                        <section class="swiper-wrapper">
-                          <!-- Slides -->
-                          <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                          <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                          <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-
-                          <section class="swiper-slide">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                          <section class="swiper-slide">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                        </section>
-                    </div>
-                    <!-- laptop swiper -->
-                    <div class="swiper swiper__laptop">
-                        <!-- navigation buttons -->
-                        <div class="swiper__interface">
-                            <div class="swiper__interface_inner">
-                                <div class="players-button-prev"></div>
-                                
-                                <!-- If we need pagination -->
-                                <div class="swiper-pagination"></div>
-
-                                <div class="players-button-next"></div>
-                            </div>
-                        </div>
-
-                        <!-- Additional required wrapper -->
-                        <section class="swiper-wrapper">
-                          <!-- Slides -->
-                          <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                          <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                          <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-
-                          <section class="swiper-slide">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                          <section class="swiper-slide">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                          </section>
-                        </section>
-                    </div>
-                    <!-- mobile swiper -->
-                    <div class="swiper swiper__mobile">
-                        <!-- navigation buttons -->
-                        <div class="swiper__interface">
-                            <div class="swiper__interface_inner">
-                                <div class="players-button-prev"></div>
-                                
-                                <!-- If we need pagination -->
-                                <div class="swiper-pagination"></div>
-
-                                <div class="players-button-next"></div>
-                            </div>
-                        </div>
-
-                        <!-- Additional required wrapper -->
-                        <section class="swiper-wrapper">
-                            <!-- Slides -->
-                            <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                            </section>
-                            <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                            </section>
-                            <section class="swiper-slide">
-                            <img class="" src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                            </section>
-
-                            <section class="swiper-slide">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                            </section>
-                            <section class="swiper-slide">
-                            <img src="img/player-img.png" alt="img" draggable="false" />
-                            <h4 class="players__name">Хозе-Рауль Капабланка</h4>
-                            <p class="players__level">Чемпион мира по шахматам</p>
-                            <a class="players__link" href="#">Подробнее</a>
-                            </section>
-                        </section>
                     </div>
                 </section>
             </div>

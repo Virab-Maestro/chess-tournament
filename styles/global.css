@@ -1,3 +1,10 @@
+:root {
+    --slide-width: 390px;
+    --slider-gap: 15px;
+    --slides-to-show: 3;
+    --visibility-width: calc((var(--slide-width) + var(--slider-gap)) * var(--slides-to-show));
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -108,7 +115,62 @@ th, td{
 td:nth-child(even){
     font-weight: bold;
 }
+
+
 /* slider players */
+.players__slider-wrapper {
+    position: relative;
+}
+
+.players__slider {
+    max-width: 100%;
+    width: var(--visibility-width);
+    margin: 0 auto;
+    overflow: unset;
+    overflow-x: clip!important;
+}
+
+.players__slider-inner {
+    display: flex;
+    gap: var(--slider-gap);
+    transition: all .3s;
+}
+
+.players__slider-pagination {
+    position: absolute;
+    top: -115px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.players-pag-info {
+    text-align: center;
+    width: 52px;
+}
+.slider__slash, .slider__total {
+    opacity: 0.6;
+}
+
+.players__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--slide-width);
+    min-width: var(--slide-width);
+}
+.players__slide img{
+    max-width: var(--slide-width);
+    margin-bottom: 28px;
+}
+.players__name {
+    margin-bottom: 6px;
+}
+players__level {
+    margin-bottom: 20px;
+}
+
+/*TODO: delete*/
 .swiper {
     width: 100%;
     overflow: unset!important;
@@ -150,6 +212,8 @@ td:nth-child(even){
     position: relative;
     width: 45px;
     height: 45px;
+    border: none;
+    outline: none;
     background-color: #313131;
     border-radius: 50%;
     padding: 13px 22px;
@@ -212,6 +276,12 @@ td:nth-child(even){
 
 
 /* Media ************************************************************************************** */
+@media(max-width: 1252px){
+    :root {
+        --slides-to-show: 2;
+    }
+}
+
 @media(max-width: 1024px){
     .title{
         font-size: 28px;
@@ -223,10 +293,34 @@ td:nth-child(even){
     .swiper__laptop{display: block;}
 }
 
+@media(max-width: 768px){
+    :root {
+        --slides-to-show: 1;
+    }
+}
+
 @media(max-width: 640px){
+    :root {
+        --slide-width: 335px;
+    }
+    .players__slide img{
+        max-width: 244px;
+    }
+    .players__slider-pagination {
+        top: unset;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -80px;
+    }
+    .players-pag-info {
+        width: 43px;
+        font-size: 16px;
+    }
     .swiper__laptop{display: none;}
     .swiper__mobile{display: block;}
 }
+
 @media(max-width: 480px){
     .players-button-prev,.players-button-next{
         width: 36px;
